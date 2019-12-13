@@ -21,3 +21,10 @@ See: https://docs.microsoft.com/en-us/windows/win32/seccrypto/example-c-program-
 Run nc -lp 1337 to listen on port 1337. Can use 'rlwrap' for history options.
 
 ## Compilation flags
+Exe compiled with:
+g++ -m32 -std=c++11 ReverseShell.cpp -o trust_me.exe -s -lws2_32 -fno-exceptions -fmerge-all-constants -static-libstdc++ -static-libgcc -w -fpermissive
+
+Ensures the binary is minimal as possible, stripped from compilation meta-data and avoids dynamic links.
+Further reading can be found here: 
+https://niiconsulting.com/checkmate/2018/03/malware-development-welcome-dark-side-part-2-2/
+
